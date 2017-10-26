@@ -7,9 +7,13 @@
 <h2>You have the following tasks</h2>
 <ul>
     @foreach ($tasks as $task)
-        <a href="/tasks/{{task->id}}">
-            <li>{{ $task->body }} </li>
-        </a>
+
+            <li>
+                <a href="/is421mvc/public/tasks/{{$task->id}}">
+                {{ $task->body }}
+                </a>
+            </li>
+
 
     @endforeach
 </ul>

@@ -1,9 +1,9 @@
 <html>
 <head>
-    <title>About</title>
+    <title></title>
 
 </head>
 <body>
-        <li>{{ $task->body }} </li>
+        <h1>{{ $task->body }} </h1>
 </body>
 </html>
