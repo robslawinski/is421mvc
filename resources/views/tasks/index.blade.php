@@ -1,24 +1,24 @@
 @extends("layout");
 @section("content");
-    <html>
-    <head>
-        <title>Index</title>
 
-    </head>
-    <body>
-    <h2>You have the following tasks</h2>
-    <ul>
-        @foreach ($tasks as $task)
+    @if($tasks->isEmpty())
+        <a href ="/is421mvc/public/tasks/create"> <b>Create a Task</b></a>
+    @else
+        @if(Auth::check())
+            <h1>{{Auth::user()-> name}}'s Task List</h1>
 
-                <li>
-                    <a href="/is421mvc/public/tasks/{{$task->id}}">
-                    {{ $task->body }}
-                    </a>
-                </li>
+            @foreach ($tasks as $task)
+
+                    <li>
+                        <a href="/is421mvc/public/tasks/{{$task->id}}">
+                        {{ $task->body }}
+                        </a>
+                    </li>
 
 
-        @endforeach
-    </ul>
-    </body>
-    </html>
+            @endforeach
+        @else
+            <b>Welcome</b>
+        @endif
+    @endif
 @endsection;
