@@ -20,18 +20,6 @@
         <button type="submit" class="btn btn-primary">Save</button>
         <br><br/>
     </form>
-    <p>
-    <form action="/is421mvc/public/tasks/{{$task->id}}/delete" method="post" class="col-8">
-        {{ csrf_field() }}
-        {{ method_field('DELETE') }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-danger">Delete</button>
-        </div>
-
-    </form>
-    Created at: {{date("F d, Y h:i:s", strtotime($task->created_at))}}</br>
-    Updated at: {{$task->updated_at}}</br>
-    </p>
     <div class="comments">
         <form action="/is421mvc/public/tasks/{{$task->id}}/comments" method="post" class="col-8">
             {{ csrf_field() }}
@@ -53,4 +41,17 @@
             @endforeach
         </ul>
     </div>
+    <p>
+    <form action="/is421mvc/public/tasks/{{$task->id}}/delete" method="post" class="col-8">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+
+    </form>
+    Created at: {{date("F d, Y h:i:s", strtotime($task->created_at))}}</br>
+    Updated at: {{$task->updated_at}}</br>
+    </p>
+
 @endsection

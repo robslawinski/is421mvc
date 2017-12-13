@@ -28,4 +28,5 @@ class Task extends Model
         //uses above method to add new comments
         $this->comments()->Create(compact('body', 'user_id'));
     }
+
 }
