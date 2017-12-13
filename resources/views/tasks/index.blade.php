@@ -82,7 +82,7 @@
                         <div>
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal-{{ $task->id }}">
 
-                                <span class="glyphicon glyphicon-trash">{{$task->id}}</span>
+                                <span class="glyphicon glyphicon-trash"></span>
 
                             </button>
 

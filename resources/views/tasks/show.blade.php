@@ -42,14 +42,7 @@
         </ul>
     </div>
     <p>
-    <form action="/is421mvc/public/tasks/{{$task->id}}/delete" method="post" class="col-8">
-        {{ csrf_field() }}
-        {{ method_field('DELETE') }}
-        <div class="form-group">
-            <button type="submit" class="btn btn-danger">Delete</button>
-        </div>
 
-    </form>
     Created at: {{date("F d, Y h:i:s", strtotime($task->created_at))}}</br>
     Updated at: {{$task->updated_at}}</br>
     </p>
